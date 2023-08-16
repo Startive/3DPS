@@ -355,10 +355,10 @@ func main() {
 
 	/// Routing
 	http.HandleFunc("/", hewo)
-	http.Handle("/login", VersionMWFunc(authenticate))
-	http.Handle("/download/", VersionMW(AuthMWFunc(downloadLevel)))
-	http.Handle("/recent", VersionMW(AuthMWFunc(getRecents)))
-	http.Handle("/upload", VersionMW(AuthMWFunc(postLevel)))
+	http.Handle("/3Dash/login", VersionMWFunc(authenticate))
+	http.Handle("/3Dash/download/", VersionMW(AuthMWFunc(downloadLevel)))
+	http.Handle("/3Dash/recent", VersionMW(AuthMWFunc(getRecents)))
+	http.Handle("/3Dash/upload", VersionMW(AuthMWFunc(postLevel)))
 
 	/// Listen And Serve
 	if *printVer {
